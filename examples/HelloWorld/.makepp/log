@@ -1,0 +1,25 @@
+3/usr/local/bin/makepp
+VERSION2.05.16.2darwin-thread-multi-2level
+LOAD140219442686336makefile140219441710640/users/admin/arduino-makefile/examples/helloworld140219441710640
+TRY140219442686336
+USEdefault rule
+DEPEND140219442686336
+UP_TO_DATE140219442686336
+LOAD_DEFAULT140219441709608arduino-makefile140219441709128/users/admin
+LOAD_INCL140219442875440makepp_builtin_rules.mk140219442249080/usr/local/cellar/makepp/2.0/share/makepp140219442866248makepp_default_makefile.mk140219442249080
+LOAD_END140219442866248
+PREBUILD140219442917896arduino.mk140219441709608/users/admin/arduino-makefile/examples/helloworld/makefile:4
+TRY140219442917896
+USEdefault rule
+DEPEND140219442917896
+UP_TO_DATE140219442917896
+LOAD_INCL140219442917896/users/admin/arduino-makefile/examples/helloworld/makefile:4
+LOAD_REC140219442917896
+IFEQ/users/admin/arduino-makefile/arduino.mk:241
+IFEQ0/users/admin/arduino-makefile/arduino.mk:242
+*** /users/admin/arduino-makefile/examples/helloworld/makefile:4: error handling Mpp::makefile_0::s_include statement
+/users/admin/arduino-makefile/arduino.mk:261: error handling Mpp::makefile_0::s_include statement
+makepp: can't find include file `/Common.mk'
+
+
+N_FILES000
