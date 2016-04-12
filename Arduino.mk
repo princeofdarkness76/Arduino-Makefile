@@ -793,10 +793,14 @@ ifeq ($(strip $(CHK_SOURCES)),)
             else
                 #TODO: Support more than one file. https://github.com/sudar/Arduino-Makefile/issues/49
 <<<<<<< HEAD
+<<<<<<< HEAD
                 $(error Need exactly one .pde or .ino file. This makefile doesn\'t support multiple .ino/.pde files yet)
 =======
                 $(error Need exactly one .pde or .ino file. This makefile doesn't support multiple .ino/.pde files yet)
 >>>>>>> headers
+=======
+                $(error Need exactly one .pde or .ino file. This makefile doesn\'t support multiple .ino/.pde files yet)
+>>>>>>> master
             endif
         endif
 
@@ -827,6 +831,9 @@ endif
 
 ########################################################################
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 # Automatically find the libraries needed to compile the sketch
 
 ifndef MAIN_LIBS
@@ -840,8 +847,11 @@ ifndef LIBS_DEPS
 endif
 
 ########################################################################
+<<<<<<< HEAD
 =======
 >>>>>>> headers
+=======
+>>>>>>> master
 # Determine ARDUINO_LIBS automatically
 
 ifndef ARDUINO_LIBS
@@ -851,13 +861,17 @@ ifndef ARDUINO_LIBS
     ARDUINO_LIBS += $(filter $(notdir $(wildcard $(ARDUINO_SKETCHBOOK)/libraries/*)), \
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> headers
+=======
+>>>>>>> master
         $(shell sed -ne 's/^ *\# *include *[<\"]\(.*\)\.h[>\"]/\1/p' $(LOCAL_SRCS)))
     ARDUINO_LIBS += $(filter $(notdir $(wildcard $(USER_LIB_PATH)/*)), \
         $(shell sed -ne 's/^ *\# *include *[<\"]\(.*\)\.h[>\"]/\1/p' $(LOCAL_SRCS)))
     ARDUINO_LIBS += $(filter $(notdir $(wildcard $(ARDUINO_PLATFORM_LIB_PATH)/*)), \
         $(shell sed -ne 's/^ *\# *include *[<\"]\(.*\)\.h[>\"]/\1/p' $(LOCAL_SRCS)))
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         $(shell sed -ne "s/^ *\# *include *[<\"]\(.*\)\.h[>\"]/\1/p" $(LOCAL_SRCS)))
@@ -865,6 +879,12 @@ ifndef ARDUINO_LIBS
 >>>>>>> origin/auto-lib
 =======
 >>>>>>> headers
+=======
+=======
+        $(shell sed -ne "s/^ *\# *include *[<\"]\(.*\)\.h[>\"]/\1/p" $(LOCAL_SRCS)))
+    ARDUINO_LIBS += $(MAIN_LIBS) $(LIBS_DEPS)
+>>>>>>> origin/sudar/auto-lib
+>>>>>>> master
 endif
 
 ########################################################################
@@ -1139,6 +1159,9 @@ else
 endif
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 ifneq (,$(strip $(MAIN_LIBS)))
     $(call arduino_output,-)
     $(call show_config_info,MAIN_LIBS =)
@@ -1149,6 +1172,7 @@ ifneq (,$(strip $(MAIN_LIBS)))
 endif
 
 ifneq (,$(strip $(LIBS_DEPS)))
+<<<<<<< HEAD
     $(call arduino_output,-)
     $(call show_config_info,LIBS_DEPS =)
 endif
@@ -1162,13 +1186,25 @@ ifneq (,$(strip $(SYS_LIBS)))
     $(call show_config_info,SYS_LIBS =)
 =======
 ifneq (,$(strip $(ARDUINO_LIBS)))
+=======
+>>>>>>> master
     $(call arduino_output,-)
-    $(call show_config_info,ARDUINO_LIBS =)
+    $(call show_config_info,LIBS_DEPS =)
 endif
 
+<<<<<<< HEAD
 ifneq (,$(strip $(USER_LIB_NAMES)))
     $(foreach lib,$(USER_LIB_NAMES),$(call show_config_info,  $(lib),[USER]))
 >>>>>>> headers
+=======
+ifneq (,$(strip $(LIBS_DEPS)))
+    $(foreach lib,$(LIBS_DEPS),$(call show_config_info,  $(lib),[USER]))
+endif
+
+ifneq (,$(strip $(SYS_LIBS)))
+    $(call arduino_output,-)
+    $(call show_config_info,SYS_LIBS =)
+>>>>>>> master
 endif
 
 ifneq (,$(strip $(SYS_LIB_NAMES)))
